@@ -46,8 +46,8 @@
         "zh": "高峰时段与本次花费"
       },
       "description": {
-        "en": "Adds a line below the composer showing whether DeepSeek billing is in peak hours and the estimated USD spent in this session.",
-        "zh": "在输入框下方显示当前是否处于 DeepSeek 高峰计费时段，以及本会话的预估美元花费。"
+        "en": "Adds a line below the composer with the live DeepSeek billing window, the estimated USD spent in this session, and your account balance.",
+        "zh": "在输入框下方显示 DeepSeek 当前计费时段、本会话的预估美元花费，以及账户余额。"
       },
       "icon": "https://raw.githubusercontent.com/ogidimitrov/dsh-peak-cost/main/icon.svg",
       "author": "ogidimitrov",
