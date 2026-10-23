@@ -1,0 +1,124 @@
+{
+  "format": 1,
+  "title": {
+    "en": "ogidimitrov's DSH plugins",
+    "zh": "ogidimitrov 的 DSH 插件"
+  },
+  "description": {
+    "en": "DeepSeek Harness bundles maintained by ogidimitrov: session cost visibility and version-aware Laravel engineering skills.",
+    "zh": "由 ogidimitrov 维护的 DeepSeek Harness 插件包：会话花费显示，以及版本感知的 Laravel 工程技能。"
+  },
+  "metadata": {
+    "categories": {
+      "interface": {
+        "title": {
+          "en": "Interface",
+          "zh": "界面"
+        }
+      },
+      "skills": {
+        "title": {
+          "en": "Skills",
+          "zh": "技能"
+        }
+      }
+    },
+    "labels": {
+      "cost": {
+        "title": {
+          "en": "Cost",
+          "zh": "花费"
+        }
+      },
+      "laravel": {
+        "title": {
+          "en": "Laravel",
+          "zh": "Laravel"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-peak-cost",
+      "title": {
+        "en": "Peak Hours & Session Spend",
+        "zh": "高峰时段与本次花费"
+      },
+      "description": {
+        "en": "Adds a line below the composer showing whether DeepSeek billing is in peak hours and the estimated USD spent in this session.",
+        "zh": "在输入框下方显示当前是否处于 DeepSeek 高峰计费时段，以及本会话的预估美元花费。"
+      },
+      "icon": "https://raw.githubusercontent.com/ogidimitrov/dsh-peak-cost/main/icon.svg",
+      "author": "ogidimitrov",
+      "homepage": "https://github.com/ogidimitrov/dsh-peak-cost#readme",
+      "repository": {
+        "url": "https://github.com/ogidimitrov/dsh-peak-cost"
+      },
+      "metadata": {
+        "category": "interface",
+        "keywords": [
+          "deepseek",
+          "cost",
+          "pricing",
+          "peak",
+          "spend",
+          "tokens"
+        ],
+        "labels": [
+          "cost"
+        ]
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1792785510,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ogidimitrov/dsh-peak-cost",
+            "commit": "659b813b50abc1753758e941b48d8f983a5e13c2"
+          }
+        }
+      ]
+    },
+    {
+      "name": "dsh-laravel-skills",
+      "title": {
+        "en": "Laravel Skills",
+        "zh": "Laravel 技能"
+      },
+      "description": {
+        "en": "Version-aware Laravel engineering skills: stack detection, per-version guidance, SOLID design, and stack-specific playbooks.",
+        "zh": "版本感知的 Laravel 工程技能：技术栈识别、按版本给出的指引、SOLID 设计，以及各技术栈的操作手册。"
+      },
+      "author": "ogidimitrov",
+      "repository": {
+        "url": "https://github.com/ogidimitrov/dsh-laravel"
+      },
+      "metadata": {
+        "category": "skills",
+        "keywords": [
+          "laravel",
+          "php",
+          "skills",
+          "livewire",
+          "blade"
+        ],
+        "labels": [
+          "laravel"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1792784042,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ogidimitrov/dsh-laravel",
+            "commit": "2b114b604c925cf6673265d664dbc4d6e83cde49"
+          }
+        }
+      ]
+    }
+  ]
+}
