@@ -12,7 +12,7 @@ https://raw.githubusercontent.com/ogidimitrov/dsh-plugins/main/index.json
 
 | Bundle | Version | What it does |
 |---|---|---|
-| [`dsh-peak-cost`](https://github.com/ogidimitrov/dsh-peak-cost) | 1.0.0 | Peak-hours indicator and estimated USD spend for the current session, below the composer |
+| [`dsh-peak-cost`](https://github.com/ogidimitrov/dsh-peak-cost) | 1.4.1 | Peak-hours indicator, session spend with per-content cost attribution on hover, and account balance, below the composer |
 | [`dsh-laravel-skills`](https://github.com/ogidimitrov/dsh-laravel) | 0.1.0 | Version-aware Laravel engineering skills: stack detection, per-version guidance, SOLID design, stack playbooks |
 
 ## Install from this index
@@ -45,12 +45,12 @@ Format 1 is a plain JSON document validated by the Harness package `@deepseek-ai
       "metadata": { "keywords": ["…"] },
       "versions": [
         {
-          "version": "1.0.0",
-          "publishTimestamp": 1792785510,
+          "version": "1.4.1",
+          "publishTimestamp": 1792821518,
           "source": {
             "type": "git",
             "url": "https://github.com/ogidimitrov/dsh-peak-cost",
-            "commit": "659b813b50abc1753758e941b48d8f983a5e13c2"
+            "commit": "13f7358f77fa083939e7c19c771229647cfc24cf"
           }
         }
       ]
@@ -70,14 +70,13 @@ Rules that matter when editing:
 
 ## Validate before publishing
 
-The validator is the same code the app runs, so a document that passes here is accepted by Discover:
+The validator is the same code the app runs, so a document that passes here is accepted by Discover. It is published as `@deepseek-ai/dsh-plugin-market-index`, so validating needs no checkout of the Harness repository. From the root of this repository:
 
 ```bash
-npm install semver --no-save
-curl -sO https://raw.githubusercontent.com/deepseek-ai/deepseek-harness/master/packages/util/plugin-market-index/lib/index.js
+npm install --prefix . --no-save @deepseek-ai/dsh-plugin-market-index
 node --input-type=module -e "
 import { readFile } from 'node:fs/promises';
-import { parseMarketIndex, marketInstallTarget } from './index.js';
+import { parseMarketIndex, marketInstallTarget } from '@deepseek-ai/dsh-plugin-market-index';
 const doc = JSON.parse(await readFile('index.json', 'utf8'));
 const parsed = parseMarketIndex(doc, 'https://raw.githubusercontent.com/ogidimitrov/dsh-plugins/main/index.json');
 for (const p of parsed.plugins) for (const v of p.versions) {
@@ -85,6 +84,8 @@ for (const p of parsed.plugins) for (const v of p.versions) {
 }
 "
 ```
+
+The `--prefix .` keeps the install in this directory instead of walking up to a parent `package.json`, and `node_modules/` is ignored by Git.
 
 A published index is cached by the app for ten minutes (`cacheTtlMs`); the Discover tab can force a refresh.
 
