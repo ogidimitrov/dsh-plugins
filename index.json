@@ -71,6 +71,15 @@
       },
       "versions": [
         {
+          "version": "1.4.1",
+          "publishTimestamp": 1792821518,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/ogidimitrov/dsh-peak-cost",
+            "commit": "13f7358f77fa083939e7c19c771229647cfc24cf"
+          }
+        },
+        {
           "version": "1.4.0",
           "publishTimestamp": 1792821268,
           "source": {
